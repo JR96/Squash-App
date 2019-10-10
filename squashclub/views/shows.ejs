@@ -1,0 +1,20 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/css/shows.css">
+<div class="container">
+    <h1 style="text-align:center"><%= pictures.name %></h1>
+<div id="court"class="thumbnail">
+    <img class="img-responsive" src="<%= pictures.image %>">
+
+</div>
+<div class="caption-full">
+    <p><%= pictures.description %></p>
+
+    <a href="/home" class="btn btn-primary">Back</a>
+    <a href="/home/<%= pictures._id %>/booking" class="btn btn-primary">Book</a>
+</div>
+
+
+</div>
+
+
+<% include partials/footer %>

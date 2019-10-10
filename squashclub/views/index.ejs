@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+<div class="container">
+    <header class=jumbotron>
+        <div>
+            <h2>Welcome to ArcelorMittal Squash Club</h2>
+            <p>The greatest part of the game is having the opportunity to play</p>
+            <!--<p>-->
+            <!--    <a class="btn btn-primary" href="/signup">SignUp</a>  -->
+            <!--</p> -->
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% pictures.forEach(function(pictures){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= pictures.image %>">
+                <div class ="caption">
+                    <h4><%= pictures.name %></h4>
+                </div>
+                <div>
+                    <p>
+                        <a href="/home/<%= pictures._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                    <!--<p>-->
+                        <!--<a href="/booking" class="btn btn-primary">Book</a>-->
+                    <!--</p>-->
+                </div>
+            </div>
+            
+        </div>
+        <% }); %>
+    </div>
+
+   
+
+<% include partials/footer %>
